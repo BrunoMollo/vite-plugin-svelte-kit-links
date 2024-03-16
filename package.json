@@ -1,12 +1,15 @@
 {
   "name": "vite-plugin-svelte-kit-links",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
-  "module": "./src/index.esm.js",
+  "main": "./src/index.,mjs",
+  "module": "./src/index.mjs",
+  "types": "./src/index.d.ts",
   "exports": {
     ".": {
-      "import": "./src/index.esm.js",
-      "require": "./src/index.esm.js"
+      "import": "./src/index.mjs",
+      "require": "./src/index.mjs",
+      "types": "./src/index.d.ts"
     }
   },
   "files": [
