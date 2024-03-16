@@ -35,7 +35,7 @@ export function svelteKitLinks() {
       server.watcher.on("change", async () => {
         const routes = await printFilesRecursively("src/routes");
         fs.writeFile(
-          "./node_modules/vite-plugin-svelte-kit-links/dist/links.ts",
+          "./node_modules/vite-plugin-svelte-kit-links/src/links.ts",
           "export type SvelteKitLink = " +
             routes.map((x) => `\`${x}\``).join("|")
         );

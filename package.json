@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-svelte-kit-links",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "",
   "main": "./src/index.,mjs",
   "module": "./src/index.mjs",
