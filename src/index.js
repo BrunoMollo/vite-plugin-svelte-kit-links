@@ -1,7 +1,7 @@
 import path from "node:path";
 import fs from "node:fs/promises";
 
-async function printFilesRecursively(dirPath: string, routes = [] as string[]) {
+async function printFilesRecursively(dirPath, routes = []) {
   try {
     const files = await fs.readdir(dirPath);
 
@@ -31,15 +31,23 @@ async function printFilesRecursively(dirPath: string, routes = [] as string[]) {
 export function svelteKitLinks() {
   return {
     name: "my-vite-plugin",
-    configureServer(server: any) {
+    configureServer(server) {
       server.watcher.on("change", async () => {
         const routes = await printFilesRecursively("src/routes");
         fs.writeFile(
-          "./node_modules/vite-plugin-svelte-kit-links/index.ts",
+          "./node_modules/vite-plugin-svelte-kit-links/dist/links.ts",
           "export type SvelteKitLink = " +
             routes.map((x) => `\`${x}\``).join("|")
         );
       });
     },
   };
+}
+
+/**
+ * .
+ * @param {import("./index.d.ts").SvelteKitLink} url - Should be a vaild url inside the app.
+ */
+export function u(href) {
+  return href;
 }
