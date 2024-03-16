@@ -3,12 +3,10 @@
   "version": "0.0.7",
   "description": "",
   "module": "./src/index.esm.js",
-  "types": "./src/index.d.ts",
   "exports": {
     ".": {
       "import": "./src/index.esm.js",
-      "require": "./src/index.esm.js",
-      "types": "./src/index.d.ts"
+      "require": "./src/index.esm.js"
     }
   },
   "files": [
