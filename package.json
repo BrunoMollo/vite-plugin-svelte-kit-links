@@ -31,9 +31,6 @@
     ]
   },
   "license": "MIT",
-  "peerDependencies": {
-    "vite": "^3 || ^4"
-  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
